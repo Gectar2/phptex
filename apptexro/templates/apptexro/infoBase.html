@@ -1,0 +1,24 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    {% if CNTBase != None %}
+        <title>{{CNTBase.name_page}}</title>
+    {% else %}
+        <title>К сожалению, страница, которую вы ищите, не существует! #404</title>
+    {% endif %} 
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="nw container__content">
+        {% if CNTBase != None %}
+            <p class="title__Control__panel"><a style="color: #000;" href="/panl/{{URL}}">{{TitleSite}}</a> » {{CNTBase.name_page}}</p>
+        {% else %}
+            <p class="title__Control__panel">{{TitleSite}} » К сожалению, страница, которую вы ищите, не существует! #404</p>
+        {% endif %}
+    </section>
+{% endblock %} 
+{% block container_content %}
+    <section class="nw container__content">
+        {{CNTBase.content_text|safe}}
+    </section>
+{% endblock %} 

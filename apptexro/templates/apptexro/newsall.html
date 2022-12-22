@@ -1,0 +1,26 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    <title>Новости</title>
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="container__content">
+        <p class="title__Control__panel"><a style="color: #000;" href="/panl/{{URL}}">Главная</a> » Новости</p>
+    </section>
+{% endblock %} 
+{% block container_content %}
+    <section class="nw container__content">
+        <div>
+            <table width="100%" cellpadding="5">
+                {% for idatanews in ADDNews %}
+                <tr>
+                    <td class="td__yu colum1"><a style="color: #000;" href="{% url 'newsite' idatanews.id %}"><img class="newspaper__news" src="{% static 'aptexro/img/newspaper.svg' %}"
+                                alt="">&nbsp;{{idatanews.title}}</a></td>
+                    <td class="td__yu colum2">{{idatanews.date_time|date:'d.m.Y'}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+{% endblock %} 

@@ -1,0 +1,92 @@
+[
+    {
+        "application_number": "6679243719957629",
+        "surname": "Березин ",
+        "name": "Андрей ",
+        "patronymic": "Борисович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.03 Операционная деятельность в логистике",
+        "average_score": "4.27",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "7657552857956005",
+        "surname": "Джеппарова",
+        "name": "Виолетта",
+        "patronymic": "Руслановна",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.03 Операционная деятельность в логистике",
+        "average_score": "4.47",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "4125560439234916",
+        "surname": "Пырлий",
+        "name": "Никита",
+        "patronymic": "Петрович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.01 Экономика и бухгалтерский учет (по отраслям)",
+        "average_score": "3.53",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "1520306279114037",
+        "surname": "Березин ",
+        "name": "Андрей ",
+        "patronymic": "Борисович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.01 Экономика и бухгалтерский учет (по отраслям)",
+        "average_score": "4.27",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "2201345491494667",
+        "surname": "Березин",
+        "name": "Дмитрий",
+        "patronymic": "Борисович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.01 Экономика и бухгалтерский учет (по отраслям)",
+        "average_score": "4.33",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "1951592057318704",
+        "surname": "Пырлий",
+        "name": "Никита",
+        "patronymic": "Петрович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "09.01.03 Мастер по обработке цифровой информации",
+        "average_score": "3.53",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "5440879310876253",
+        "surname": "Бень",
+        "name": "Кирилл",
+        "patronymic": "Андреевич",
+        "date_of_submission": "2022-06-20",
+        "specialization": "09.01.03 Мастер по обработке цифровой информации",
+        "average_score": "3.33",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "5263507086889847",
+        "surname": "Березин ",
+        "name": "Андрей ",
+        "patronymic": "Борисович",
+        "date_of_submission": "2022-06-20",
+        "specialization": "25.02.06 Производство и обслуживание авиационной техники",
+        "average_score": "4.27",
+        "status": "Услуга оказана"
+    },
+    {
+        "application_number": "7939407144649433",
+        "surname": "Сербова",
+        "name": "Екатерина",
+        "patronymic": "Алексеевна",
+        "date_of_submission": "2022-06-20",
+        "specialization": "38.02.03 Операционная деятельность в логистике",
+        "average_score": "3.89",
+        "status": "Услуга оказана"
+    }
+]

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'AnonymousPro-Regular';
+    src: url('../fonts/AnonymousPro-Regular.woff2') format('woff2'),
+        url('../fonts/AnonymousPro-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'AnonymousPro-Italic';
+    src: url('../fonts/AnonymousPro-Italic.woff') format('woff'),
+        url('../fonts/AnonymousPro-Italic.woff2') format('woff2');
+
+}

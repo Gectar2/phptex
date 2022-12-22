@@ -1,0 +1,52 @@
+<div role="navigation" class="navigation display__block__navigation">
+    <div class="nav-pos topmenu">
+        <ul class="ul">
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    {% for iblock1 in PanelSite_block1 %}
+                        <li class="li li__text__menu"><a class="a" href="{% url 'infpoosite' iblock1 %}">{{iblock1.name_page}}</a>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ГЛАВНАЯ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    <a class="a" href="{% url 'newspisok' %}"><li class="li li__text__menu">Новости</li></a>
+                    {% for iblock2 in PanelSite_block2 %}
+                        <a class="a" href="{% url 'mainsite' iblock2 %}"><li class="li li__text__menu">{{iblock2.name_page}}</li></a>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">АБИТУРИЕНТУ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    {% for iblock3 in PanelSite_block3 %}
+                        <a class="a" href="{% url 'entrantsite' iblock3 %}"><li class="li li__text__menu">{{iblock3.name_page}}</li></a>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">СТУДЕНТУ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    {% for iblock4 in PanelSite_block4 %}
+                        <a class="a" href="{% url 'studentsite' iblock4 %}"><li class="li li__text__menu">{{iblock4.name_page}}</li></a>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ВЫПУСКНИКУ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    {% for iblock5 in PanelSite_block5 %}
+                        <a class="a" href="{% url 'infv' iblock5 %}"><li class="li li__text__menu">{{iblock5.name_page}}</li></a>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ПЕДАГОГУ</a>
+                <ul class="ul dropdown" aria-label="submenu">
+                    {% for iblock6 in PanelSite_block6 %}
+                        <a class="a" href="{% url 'teachersite' iblock6 %}"><li class="li li__text__menu">{{iblock6.name_page}}</li></a>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    {% if CNTBase != None %}
+        <title>{{TitleSite}}</title>
+    {% else %}
+        <title>К сожалению, страница, которую вы ищите, не существует! #404</title>
+    {% endif %} 
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="nw container__content">
+        {% if CNTBase != None %}
+            <p class="global__color title__Control__panel" style="font-weight: 800;">{{TitleSite}}</p>
+        {% else %}
+            <p class="global__color title__Control__panel">К сожалению, страница, которую вы ищите, не существует! #404</p>
+        {% endif %}
+    </section>
+{% endblock %} 
+{% block container_content %}
+    <section class="nw container__content">
+        <table>
+            {% for i in CNTBase %}
+                <tr style="font-size: 20px;">
+                    <th class="nw global__color" style="padding: 5px 10px; font-weight: 100; border-bottom: 0.1px solid #000000; border-right: 0.1px solid #000000; width: 800px; text-align: left;">{{i.name_page}}</th>
+                    <th style="padding: 5px 10px 0 0; font-weight: 100; border-bottom: 0.1px solid #000000; width: 100px; text-align: right;"><a class="nw global__color" href="/{{URL}}/{{i.name_link}}" style="color: #000; text-decoration:underline;">Перейти</a></th>
+                </tr>
+            {% endfor %}
+            {% if URL == 'd-site' %}
+                <tr style="font-size: 20px;">
+                    <th class="nw global__color" style="padding: 5px 10px; font-weight: 100; border-bottom: 0.1px solid #000000; border-right: 0.1px solid #000000; width: 800px; text-align: left;">Карта сайта</th>
+                    <th style="padding: 5px 10px 0 0; font-weight: 100; border-bottom: 0.1px solid #000000; width: 100px; text-align: right;"><a class="nw global__color" href="/card-info-site" style="color: #000; text-decoration:underline;">Перейти</a></th>
+                </tr>
+                <tr style="font-size: 20px;">
+                    <th class="nw global__color" style="padding: 5px 10px; font-weight: 100; border-bottom: 0.1px solid #000000; border-right: 0.1px solid #000000; width: 800px; text-align: left;">Схема проезда</th>
+                    <th style="padding: 5px 10px 0 0; font-weight: 100; border-bottom: 0.1px solid #000000; width: 100px; text-align: right;"><a class="nw global__color" href="/driving-directions" style="color: #000; text-decoration:underline;">Перейти</a></th>
+                </tr>
+            {% endif %}
+         </table>
+    </section>
+{% endblock %} 

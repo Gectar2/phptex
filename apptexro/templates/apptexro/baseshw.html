@@ -1,0 +1,409 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{LogoImg}}" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'apptexro/css/styleshablone.css' %}">
+    <link rel="stylesheet" href="{% static 'apptexro/css/font.css' %} ">
+    <link rel="stylesheet" href="{% static 'apptexro/css/stylemain.css' %}">
+    <link rel="stylesheet" href="{% static 'apptexro/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'apptexro/css/crollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'apptexro/css/owl.theme.default.min.css' %}">
+    {% block title %}{% endblock %}
+</head>
+
+<body>
+    <img src="{% static 'apptexro/img/img__scrol.svg' %}" class="scroll__bar__site">
+    <div class="header__vrs">
+        <div class="div__vrs">
+            Шрифт:
+            <button class="df disg__font-siz1">A</button>
+            <button class="df disg__font-siz2">A</button>
+            <button class="df disg__font-siz3">A</button>
+        </div>
+        <div class="div__vrs">
+            Цвет:
+            <button class="df disg__font1">A</button>
+            <button class="df disg__font2">A</button>
+            <button class="df disg__font3">A</button>
+        </div>
+        <div class="div__vrs">
+            Интервал:
+            <button class="df disg__font-init1">+N</button>
+            <button class="df disg__font-init2">+S</button>
+            <button class="df disg__font-init3">+V</button>
+        </div>
+    </div>
+    <header class="header__stick">
+        <div class="container header__content">
+            <div class="ministry__info header__content">
+                <img src="{% static 'apptexro/img/menu_clk.svg' %}" alt="" class="menu_clk">
+                <img src="{% static 'apptexro/img/minobr_logo_one.png' %}" alt="" class="logo__edc">
+                <div class="ministry">
+                    <a href="https://mo.mosreg.ru/" class="text_ministry" target="_blank">Министерство образования Московской области</a>
+                </div>
+                <img src="{% static 'apptexro/img/minpros_logo_two.png' %}" alt="" class="logo__educ">
+                <div class="ministry">
+                    <a href="https://edu.gov.ru/" class="text_ministry" target="_blank">Министерство просвещения Российской Федерации</a>
+                </div>
+            </div>
+            <div class="header__content">
+                <ul class="menu">
+                    <li class="menu__list"><button type="submit" class="version__visually__btn vrs__open"><img src="{% static 'apptexro/img/glasses.svg' %}" alt=""> ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</button></li>
+                    <li class="menu__list"><button type="submit" class="language__btn" onclick="window.location.href = 'https://translate.google.ru/translate?sl=ru&tl=en&js=y&prev=_t&hl=ru&ie=UTF-8&u=test.phystech.pro';">ENG</button></li>
+                    {% if not LinkVk == None  %}
+                        <li class="menu__list"><a href="{{LinkVk}}"><i class="fa fa-vk" aria-hidden="true" target="_blank"></a></i></li>
+                    {% endif %}
+                    {% if not LinkInstagram == None  %}
+                        <li class="menu__list"><a href="{{LinkInstagram}}"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></a></i></li>
+                    {% endif %}
+                    {% if not LinkFacebook == None  %}
+                        <li class="menu__list"><a href="{{LinkFacebook}}"><i class="fa fa-facebook" aria-hidden="true" target="_blank"></a></i></li>
+                    {% endif %}
+                    {% if not LinkOdnoklassniki == None  %}
+                        <li class="menu__list"><a href="{{LinkOdnoklassniki}}"><i class="fa fa-odnoklassniki" aria-hidden="true" target="_blank"></a></i></li>
+                    {% endif %}
+                    {% if not LinkYouTube == None  %}
+                        <li class="menu__list"><a href="{{LinkYouTube}}"><i class="fa fa-youtube" aria-hidden="true" target="_blank"></a></i></li>
+                    {% endif %}
+                    <li class="menu__list"><i class="fa fa-search open__popup__sher" id="a-search" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="container info_college cntinf_y">
+        <div class="margin__logo container section__block__content">
+            <div class="section__block__content">
+                <a href="/"><img class="logo_phpro" src="{{MEDIA_URL}}{{LogoImg}}" alt=""></a>
+            </div>
+            <div class="margin__title section__block__content">
+                <p class="title__college">{{TitleCollege}}</p>
+            </div>
+            <div class="margin__contact__info section__block__content">
+                <div class="contact-info">
+                    <div class="contact-info-adres">
+                        {% if not Address == None  %}
+                            <p class="contact-info-adres-text">Адрес:</p>
+                            <p class="contact-info-adres-text-small">{{Address}}</p>
+                        {% endif %}
+                        <p class="contact-info-adres-phone">Телефон:</p>
+                        {% if not PhoneOne == None  %}
+                            <p>{{PhoneOne}}</p>
+                        {% endif %}
+                        {% if not PhoneTwo == None  %}
+                            <p>{{PhoneTwo}}</p>
+                        {% endif %}
+                        {% if not Email == None  %}
+                            <p class="contact-info-adres-email">Почта:</p>
+                            <p>{{Email}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container info_college cntinf">
+        <div class="margin__logo container section__block__content">
+            <div class="section__block__content">
+                <a href="/"><img class="logo_phpro" src="{{MEDIA_URL}}{{LogoImg}}" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <section class="container info_college cntinf">
+        <div class="margin__logo container section__block__content">
+            <div class="margin__title section__block__content">
+                <p class="title__college">{{TitleCollege}}</p>
+            </div>
+        </div>
+    </section>
+    <section class="container info_college cntinf">
+        <div class="margin__logo container section__block__content">
+            <div class="margin__contact__info section__block__content">
+                <div class="contact-info">
+                    <div class="contact-info-adres">
+                    {% if not Address == None  %}
+                            <p class="contact-info-adres-text">Адрес:</p>
+                            <p class="contact-info-adres-text-small">{{Address}}</p>
+                        {% endif %}
+                        <p class="contact-info-adres-phone">Телефон:</p>
+                        {% if not PhoneOne == None  %}
+                            <p class="contact-info-phone">{{PhoneOne}}</p>
+                        {% endif %}
+                        {% if not PhoneTwo == None  %}
+                            <p class="contact-info-phone">{{PhoneTwo}}</p>
+                        {% endif %}
+                        {% if not Email == None  %}
+                            <p class="contact-info-adres-email">Почта:</p>
+                            <p class="contact-info-email">{{Email}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="margin__menu container">
+        {% include "apptexro/NavigationFixed.html" %}
+        <div class="section__block__menu">
+            <img class="group2" src="{% static 'apptexro/img/g2.svg' %}" alt="">
+            <img class="group3" src="{% static 'apptexro/img/g3.svg' %}" alt="">
+            <img class="group1" src="{% static 'apptexro/img/g1.svg' %}" alt="">
+        </div>
+        <div class="gro__one hdr"></div>
+        <div class="gro__two hdr"></div>
+        <nav role="navigation__sh" class="navigation__sh">
+            <div class="nav-pos topmenu">
+                <ul class="ul">
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            {% for iblock1 in PanelSite_block1 %}
+                                <li class="li li__text__menu"><a class="a" href="{% url 'infpoosite' iblock1 %}">{{iblock1.name_page}}</a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ГЛАВНАЯ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            <a class="a" href="{% url 'newspisok' %}"><li class="li li__text__menu">Новости</li></a>
+                            {% for iblock2 in PanelSite_block2 %}
+                                <a class="a" href="{% url 'mainsite' iblock2 %}"><li class="li li__text__menu">{{iblock2.name_page}}</li></a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">АБИТУРИЕНТУ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            {% for iblock3 in PanelSite_block3 %}
+                                <a class="a" href="{% url 'entrantsite' iblock3 %}"><li class="li li__text__menu">{{iblock3.name_page}}</li></a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">СТУДЕНТУ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            {% for iblock4 in PanelSite_block4 %}
+                                <a class="a" href="{% url 'studentsite' iblock4 %}"><li class="li li__text__menu">{{iblock4.name_page}}</li></a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ВЫПУСКНИКУ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            {% for iblock5 in PanelSite_block5 %}
+                                <a class="a" href="{% url 'infv' iblock5 %}"><li class="li li__text__menu">{{iblock5.name_page}}</li></a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+                    <li class="li"><a class="a main__text__menu" href="#" aria-haspopup="true">ПЕДАГОГУ</a>
+                        <ul class="ul dropdown" aria-label="submenu">
+                            {% for iblock6 in PanelSite_block6 %}
+                                <a class="a" href="{% url 'teachersite' iblock6 %}"><li class="li li__text__menu">{{iblock6.name_page}}</li></a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    {% block container_linkcheck %}{% endblock %} 
+    {% block container_fillter %}{% endblock %} 
+    {% block container_titlenew %}{% endblock %} 
+    {% block container_dateofpublication %}{% endblock %} 
+    {% block container_carouselofphotos %}{% endblock %} 
+    {% block container_content %}{% endblock %} 
+
+    <div class="popup__bg__menu">
+        <div class="popup__menu">
+            <img class="close__popup__menu_clk" src="{% static 'apptexro/img/close.svg' %}">
+            <p class="title__menu cv1">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</p>
+            <div id="block1" class="KL">
+                {% for iblock1 in PanelSite_block1 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'infpoosite' iblock1 %}">{{iblock1.name_page}}</a></p>
+                {% endfor %}
+            </div>
+            <p class="title__menu cv2">ГЛАВНАЯ</p>
+            <div id="block2" class="KL">
+                <p class="a__link_menu"><a class="a" href="{% url 'newspisok' %}">НОВОСТИ</a></p>
+                {% for iblock2 in PanelSite_block2 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'mainsite' iblock2 %}">{{iblock2.name_page}}</a></p>
+                {% endfor %}
+            </div>
+            <p class="title__menu cv3">АБИТУРИЕНТУ</p>
+            <div id="block3" class="KL">
+                {% for iblock3 in PanelSite_block3 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'entrantsite' iblock3 %}">{{iblock3.name_page}}</a></p>
+                {% endfor %}
+            </div>
+            <p class="title__menu cv4">СТУДЕНТУ</p>
+            <div id="block4" class="KL">
+                {% for iblock4 in PanelSite_block4 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'studentsite' iblock4 %}">{{iblock4.name_page}}</a></p>
+                {% endfor %}
+            </div>
+            <p class="title__menu cv5">ВЫПУСКНИКУ</p>
+            <div id="block5" class="KL">
+                {% for iblock5 in PanelSite_block5 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'infv' iblock5 %}">{{iblock5.name_page}}</a></p>
+                {% endfor %}
+            </div>
+            <p class="title__menu cv6">ПЕДАГОГУ</p>
+            <div id="block6" class="KL">
+                {% for iblock6 in PanelSite_block6 %}
+                    <p class="a__link_menu"><a class="a" href="{% url 'teachersite' iblock6 %}">{{iblock6.name_page}}</a></p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="popup__bg__find">
+        <div class="popup__find">
+            <img class="close__popup__find" src="{% static 'apptexro/img/close.svg' %}">
+            <form class="form__data" action="{% url 'findelement' %}" method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="Что хотите найти?" name="findtext" class="find__content" required>
+                <button class="btn__find" name="form_find">Найти</button>
+            </form>
+        </div>
+    </div>
+    <header  class="block__header__end">
+        {% if not EndHeaderColg == None  %}
+            <p class="title__end">{{EndHeaderColg}}</p>
+        {% endif %}
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{% static 'apptexro/js/jquery.js' %}"></script>
+    <script src="{% static 'apptexro/js/scr.js' %}"></script>
+    {% block container_script %}{% endblock %} 
+    <script src="{% static 'apptexro/js/FixedSetings.js' %}"></script>
+    <script>
+        {% if request.path == '/entrant/rejting-abiturientov' %}
+            {% for iKey, iValue in DataCountRejting.items %}
+                document.getElementById('{{iKey}}').textContent = {{iValue}};
+            {% endfor %}
+            let d = new Date();
+            let day = new Array("Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота");
+            let month = new Array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+            document.getElementById('titleBox').innerHTML = `Статистика поданных заявлений на ${day[d.getDay()] + " " + d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear() + " г."}` 
+        {% endif %}
+        function mySpecialization(dataSel){
+            $.ajax({
+                type:'POST',
+                url:'/jsonpost',
+                data:{
+                    dataspec: dataSel.options[dataSel.selectedIndex].value,
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                },
+                success: function(data) {
+                    function postTable(table, key, value, classtr){
+                        const row = table.insertRow();
+                        row.classList = classtr;
+                        
+                        const td0 = row.insertCell();
+                        td0.innerText = Number(key)+1;
+                        td0.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+                        
+                        const td1 = row.insertCell();
+                        td1.innerText = value['application_number'];
+                        td1.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+
+                        const td2 = row.insertCell();
+                        td2.innerText = `${value['surname']} ${value['name']} ${value['patronymic']}`;
+                        td2.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+
+                        const td3 = row.insertCell();
+                        td3.innerText = value['average_score'];
+                        td3.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+
+                        const td4 = row.insertCell();
+                        td4.innerText = value['application_status'];
+                        td4.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+                        
+                        const td5 = row.insertCell();
+                        td5.innerText = value['status'];
+                        td5.style = 'font-size: 16px; border: 0.5px solid black; padding: 10px 5px; text-align: center;';
+                    }
+                    let data_list_com = data['SpectionDataCommerce'];
+                    let data_list_bud = data['SpectionDataBudget'];
+                    let type_b = data['TP'];
+                    let name_spec = data['NameSpc']
+                    if (type_b == '0'){
+                        document.querySelector('.tableSpecNoBudget').style.display = 'block';
+                        document.querySelector('.tableSpecBudget').style.display = 'none';
+
+                        const table_no_budget = document.getElementById('tableNoBudget');
+                        document.querySelectorAll('.datanb').forEach( e => e.remove());
+
+                        document.querySelector('.title_spc_nb').innerText = name_spec;
+                        for (const [key, value] of Object.entries(data_list_com)) {
+                            postTable(table_no_budget, key, value, 'datanb');
+                        }
+
+
+                    } else if (type_b == '1'){
+                        document.querySelector('.tableSpecBudget').style.display = 'block';
+                        document.querySelector('.tableSpecNoBudget').style.display = 'none';
+
+                        const table_budget = document.getElementById('tableBudget');
+                        document.querySelectorAll('.datab').forEach( e => e.remove());
+                        document.querySelector('.title_spc_b').innerText = name_spec;
+                        for (const [key, value] of Object.entries(data_list_bud)) {
+
+                            if (value['type_of_financing'] == 'Бюджет'){
+                                postTable(table_budget, key, value, 'datab')
+                            };
+                        }
+                    } else if (type_b == '2'){
+                        document.querySelector('.tableSpecNoBudget').style.display = 'block';
+                        document.querySelector('.tableSpecBudget').style.display = 'block';
+                        
+                        const table_no_budget = document.getElementById('tableNoBudget');
+                        document.querySelectorAll('.datanb').forEach( e => e.remove());
+                        
+                        const table_budget = document.getElementById('tableBudget');
+                        document.querySelectorAll('.datab').forEach( e => e.remove());
+                        
+                        document.querySelector('.title_spc_nb').innerText = name_spec;
+                        document.querySelector('.title_spc_b').innerText = name_spec;
+                        for (const [key, value] of Object.entries(data_list_bud)) {
+                            postTable(table_budget, key, value, 'datab');
+                        }
+                        for (const [key, value] of Object.entries(data_list_com)) {
+                            postTable(table_no_budget, key, value, 'datanb');
+                        }
+                    }
+                    return false
+                },
+                error: function(data) {
+                    alert("Что-то пошло не так! Попробуйте повторить чуть позднее.");
+                }
+            })
+        }
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    console.log(txtValue);
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

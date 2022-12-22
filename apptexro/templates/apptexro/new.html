@@ -1,0 +1,95 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    <title>{{ADDNews.title}}</title>
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="nw container__content">
+        <p class="title__Control__panel"><a style="color: #000;" href="/panl/{{URL}}">Главная</a> » <a style="color: #000;" href="{% url 'newspisok' %}">Новости</a> » {{ADDNews.title}}</p>
+    </section>
+{% endblock %} 
+{% block container_titlenew %}
+    <section class="nw container__content">
+        <div class="mpr__new__tmp">
+            <p class="title__new__tmp">{{ADDNews.title}}</p>
+        </div>
+    </section>
+    {% endblock %} 
+{% block container_dateofpublication %}
+    <section class="nw container__content">
+        <div class="mpr__new__tmp">
+            {% if ADDNews != "К сожалению, страница, которую вы ищите, не существует! #404" %}
+                <p class="date__time__new">Опубликовано: {{ADDNews.date_time}}</p>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
+{% block container_carouselofphotos %}
+    <section class="nw container__content">
+        <div class="top__info__temp sld_one">
+            <div class="owl-carousel owl-theme" style='display:block; width:1000px;' id="sld_one">
+                {% for i in ADDIMGNews %}
+                    <div class="owl__div__temp">
+                        <a href="{{MEDIA_URL}}{{i.img.url}}" target="_blank">
+                            <img class="dising__new__img"
+                                src="{{MEDIA_URL}}{{i.img.url}}" alt="">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="top__info__temp sld_two">
+            <div class="owl-carousel owl-theme slidi" style='display:block; width:420px;' id="sld_two">
+                {% for i in ADDIMGNews %}
+                    <div class="owl__div__temp">
+                        <a href="{{MEDIA_URL}}{{i.img.url}}" target="_blank">
+                            <img class="dising__new__img"
+                                src="{{MEDIA_URL}}{{i.img.url}}" alt="">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %} 
+{% block container_content %}
+    <section class="nw  container__content">
+        <div class="content__info__new">
+            <div class="style__content">{{ADDNews.text_news|safe}}</div>
+        </div>
+    </section>
+    <section class="nw  container__content">
+        <a href="{% url 'newspisok' %}" class="go__back"> ← Вернуться назад</a>
+    </section>
+
+{% endblock %} 
+
+{% block container_script %}
+    <script src="{% static 'apptexro/js/owl.carousel.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#sld_one").owlCarousel({
+                items: 2,
+                margin: 10,
+                nav: true,
+                dots: false,
+                navigation: true,
+                navText: ['<img src="{% static 'apptexro/img/arrow_l.svg' %}">', '<img src="{% static 'apptexro/img/arrow_r.svg' %}">'],
+            });
+        });
+        $(document).ready(function () {
+            $("#sld_two").owlCarousel({
+                items: 1,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                loop: true,
+                navigation: false,
+            });
+        });
+    </script>
+    <script src="{% static 'apptexro/js/FixedSetings.js' %}"></script>
+{% endblock %} 

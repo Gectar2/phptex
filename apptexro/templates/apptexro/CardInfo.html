@@ -1,0 +1,47 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    <title>{{TitleSite}}</title>
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="nw container__content">
+        <p style="font-weight: 800;" class="title__Control__panel global__color"><a style="color: #000;" href="/panl/d-site">Дополнительные страницы</a> » {{TitleSite}}</p>
+    </section>
+    {% endblock %} 
+    {% block container_content %}
+    <section class="nw container__content global__color" style="font-family: 'Montserrat'; font-size:16px;">
+        <p style="font-size: 22px; font-weight: 600;">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</p> 
+        {% for i in PanelSite_block1%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/sveden/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Главная</p> 
+        <li style="font-size: 18px;"><a style="color: #000;" href="{% url 'newspisok' %}">Новости</a></li>
+        {% for i in PanelSite_block2%}
+            <li style="font-size: 18px;"><a style="color: #000;"  href="/main/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Абитуриенту</p> 
+        {% for i in PanelSite_block3%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/entrant/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Студенту</p> 
+        {% for i in PanelSite_block4%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/student/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Выпускнику</p> 
+        {% for i in PanelSite_block5%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/graduate/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Педагогу</p> 
+        {% for i in PanelSite_block6%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/teacher/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Дополнительные страницы</p> 
+        {% for i in PanelSite_block7%}
+            <li style="font-size: 18px;"><a style="color: #000;" href="/d-site/{{i.name_link}}">{{i.name_page}}</a></li>
+        {% endfor %}
+        <p style="font-size: 22px; font-weight: 600;">Прочее</p> 
+        <li style="font-size: 18px;"><a style="color: #000;" href="/card-info-site">Карта сайта</a></li>
+        <li style="font-size: 18px;"><a style="color: #000;" href="/driving-directions">Схема проезда</a></li>
+    </section>
+{% endblock %} 

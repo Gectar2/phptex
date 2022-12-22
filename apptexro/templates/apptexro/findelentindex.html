@@ -1,0 +1,90 @@
+{% extends "apptexro/baseshw.html" %} 
+{% load static %} 
+
+{% block title %}
+    <title>Результат поиска</title>
+{% endblock %} 
+{% block container_linkcheck %}
+    <section class="container__content">
+        <p class="title__Control__panel">Результаты поиска » {{STtext}}</p>
+    </section>
+{% endblock %} 
+{% block container_content %}
+ 
+    <section class="nw container__content">
+        <div>
+            <table width="100%" cellpadding="5">
+                {% for irb1 in RB1 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'newsite' irb1.id %}">{{irb1}}</a>
+                        </td>                         
+                        <td class="td__yu colum1">
+                            Категория: Новости
+                        </td>                         
+                    </tr>
+                {% endfor %}
+                {% for irb2 in RB2 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'infpoosite' irb2.name_link %}">{{irb2.name_page}}</a>
+                        </td>
+                        <td class="td__yu colum1">
+                            Категория: СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ
+                        </td>                                               
+                    </tr>
+                {% endfor %}
+                {% for irb3 in RB3 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'mainsite' irb3.name_link %}">{{irb3.name_page}}</a>
+                        </td>
+                        <td class="td__yu colum1">
+                            Категория: Главная
+                        </td>                                 
+                    </tr>
+                {% endfor %}
+                {% for irb4 in RB4 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'entrantsite' irb4.name_link %}">{{irb4.name_page}}</a>
+                        </td>
+                        <td class="td__yu colum1">
+                            Категория: Абитуриенту
+                        </td>                            
+                    </tr>
+                {% endfor %}
+                {% for irb5 in RB5 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'studentsite' irb5.name_link %}">{{irb5.name_page}}</a>
+                        </td>
+                        <td class="td__yu colum1">
+                            Категория: Студенту
+                        </td>                             
+                    </tr>
+                {% endfor %}
+                {% for irb6 in RB6 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'infv' irb6.name_link %}">{{irb6.name_page}}</a>
+                        </td>
+                        <td class="td__yu colum1">
+                            Категория: Выпускнику
+                        </td>                                
+                    </tr>
+                {% endfor %}
+                {% for irb7 in RB7 %}
+                    <tr>
+                        <td class="td__yu colum1">
+                            <a href="{% url 'teachersite' irb7.name_link %}">{{irb7.name_page}}</a>
+                        </td>  
+                        <td class="td__yu colum1">
+                            Категория: Педагогу
+                        </td>                       
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+{% endblock %} 
